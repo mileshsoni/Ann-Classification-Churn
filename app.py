@@ -4,6 +4,7 @@ import tensorflow as tf
 import pandas as pd
 import pickle
 import numpy as np
+import sklearn
 
 model = tf.keras.models.load_model('model.h5')
 
