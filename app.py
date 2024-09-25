@@ -47,7 +47,7 @@ input_data = pd.DataFrame({
 })
 
 geo_encoded = label_encoder_geo.transform([[geography]]).toarray()
-geo_encoded_df = pd.DataFrame(geo_encoded, columns = label_encoder_geo.get_feature_names(geography))
+geo_encoded_df = pd.DataFrame(geo_encoded, columns=['Geography_France', 'Geography_Germany', 'Geography_Spain'])
 input_data_df = pd.concat([input_data.reset_index(drop=True), geo_encoded_df], axis = 1)
 input_scaled = scaler.transform(input_data_df)
 pred = model.predict(input_scaled)[0][0]
