@@ -19,6 +19,7 @@ with open('Label_encoder_gender.pkl', 'rb') as file :
 
 #streamlit app
 st.title("Customer Churn Prediction")
+st.write(f"scikit-learn version: {sklearn.__version__}")
 
 #user input
 geography = st.selectbox('Geography', label_encoder_geo.categories_[0])
